@@ -1,0 +1,18 @@
+Using the class is very easy… 
+
+In your Unity3D C# script simply create an instance of the timer in the "Start()" function, passing in how many seconds you want the timer to fire on. Then you can set a 
+delegate to the timers tick event, this will be fired based on the amount of seconds you passed in the timer constructor.
+
+public Timer timer;
+
+Timer = new Timer( 1000 );
+timer.tick += delegate( System.Object o, System.EventArgs e ) { print( "it ticked" ); };
+
+
+Then in the Update() function you will need to make sure to keep calling the timers update.
+
+timer.Update();
+
+
+Thats it! You are now using a timer very similar to the one in Action Script 3.0.
+
