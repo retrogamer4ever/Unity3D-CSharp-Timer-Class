@@ -6,7 +6,7 @@ delegate to the timers tick event, this will be fired based on the amount of sec
 public Timer timer;
 
 Timer = new Timer( 1000 );
-timer.tick += delegate( System.Object o, System.EventArgs e ) { print( "it ticked" ); };
+timer.tick += delegate( System.Object o, System.EventArgs e ) { print( "it ticked" );
 
 
 Then in the Update() function you will need to make sure to keep calling the timers update.
